@@ -7,6 +7,11 @@ The goal is **not to include a great deal of tests**, but to demonstrate:
 - Tooling used
 - Simple, clean, readable tests
 
+## Disclaimer:
+
+AI tools were used as a productivity aid for C# and NUnit syntax. 
+All design decisions, structure, scope, and test logic were intentionally kept simple 
+and aligned with my current level of hands-on automation experience.
 ---
 
 ## Tech Stack

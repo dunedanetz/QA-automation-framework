@@ -14,7 +14,7 @@ public static class ConfigLoader
 
     public static TestConfig Load(string filePath)
     {
-        // Defaults (keep it simple + stable)
+        // Default configs
         var baseUrl = "https://www.rosetic.ai/";
         var browser = BrowserType.Chromium;
         var headless = true;

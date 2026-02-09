@@ -16,7 +16,7 @@ public sealed class RoseticSmokeTests : BaseUiTest
         Assert.That(
             await home.IsLoadedAsync(),
             Is.True,
-            "Home page did not load or main content is not visible."
+            "Home page is not loading or showing expected content."
         );
     }
 
@@ -53,7 +53,6 @@ public sealed class RoseticSmokeTests : BaseUiTest
             "Footer is not visible after scrolling."
         );
 
-        // Legal links may open in same tab or new tab
         try
         {
             var popup = await page.RunAndWaitForPopupAsync(
