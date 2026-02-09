@@ -1,6 +1,6 @@
 using Microsoft.Playwright;
 
-namespace Rosetic.AutomationTests.Framework;
+namespace AutomationTests.Framework;
 
 public sealed class PlaywrightDriver : IAsyncDisposable
 {

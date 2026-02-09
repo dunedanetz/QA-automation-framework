@@ -1,4 +1,4 @@
-namespace Rosetic.AutomationTests.Framework;
+namespace AutomationTests.Framework;
 
 public enum BrowserType
 {

@@ -1,6 +1,6 @@
 using System.Text.Json;
 
-namespace Rosetic.AutomationTests.Framework;
+namespace AutomationTests.Framework;
 
 public static class ConfigLoader
 {
@@ -15,7 +15,7 @@ public static class ConfigLoader
     public static TestConfig Load(string filePath)
     {
         // Default configs
-        var baseUrl = "https://www.rosetic.ai/";
+        var baseUrl = "https://example.com";
         var browser = BrowserType.Chromium;
         var headless = true;
         var timeoutMs = 30_000;

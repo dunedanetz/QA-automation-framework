@@ -1,10 +1,10 @@
 using System;
 using NUnit.Framework;
-using Rosetic.AutomationTests.Pages;
+using AutomationTests.Pages;
 
-namespace Rosetic.AutomationTests.Tests;
+namespace AutomationTests.Tests;
 
-public sealed class RoseticSmokeTests : BaseUiTest
+public sealed class SmokeTests : BaseUiTest
 {
     [Test]
     public async Task HomePage_Loads_And_ShowsContent()

@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using Rosetic.AutomationTests.Framework;
+using AutomationTests.Framework;
 
-namespace Rosetic.AutomationTests.Tests;
+namespace AutomationTests.Tests;
 
 public abstract class BaseUiTest
 {

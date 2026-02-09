@@ -2,7 +2,7 @@ using System;
 using System.Threading.Tasks;
 using Microsoft.Playwright;
 
-namespace Rosetic.AutomationTests.Pages;
+namespace AutomationTests.Pages;
 
 public sealed class HomePage
 {

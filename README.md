@@ -1,6 +1,6 @@
-# Rosetic Automation Task
+# This repository contains a sample automation framework created as part of a technical assignment
 
-This repository contains a small UI automation framework created as part of a technical assignment for Rosetic.ai.
+This repository contains a small UI automation framework created as part of a technical assignment.
 
 The goal is **not to include a great deal of tests**, but to demonstrate:
 - Framework structure
@@ -12,6 +12,7 @@ The goal is **not to include a great deal of tests**, but to demonstrate:
 AI tools were used as a productivity aid for C# and NUnit syntax. 
 All design decisions, structure, scope, and test logic were intentionally kept simple 
 and aligned with my current level of hands-on automation experience.
+
 ---
 
 ## Tech Stack
@@ -29,12 +30,12 @@ and aligned with my current level of hands-on automation experience.
 automation_task/
 ├─ .github/workflows/       # CI pipeline
 ├─ src/
-│ └─ Rosetic.AutomationTests/
+│ └─ AutomationTests/
 │ ├─ Framework/             # Driver, config, test base
 │ ├─ Pages/                 # Page Objects
 │ ├─ Tests/                 # Smoke tests
 │ ├─ appsettings.json
-│ └─ Rosetic.AutomationTests.csproj
+│ └─ AutomationTests.csproj
 ```
 ---
 
