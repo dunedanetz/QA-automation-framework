@@ -30,4 +30,6 @@ jobs:
 
       - name: Run tests
         working-directory: src/AutomationTests
-        run: dotnet test --no-build --verbosity normal
+        env:
+          BASE_URL: ${{ secrets.BASE_URL }}
+        run: dotnet test --no-build --verbosity normal    
