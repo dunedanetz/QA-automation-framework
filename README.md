@@ -64,7 +64,10 @@ dotnet build
 playwright install
 ```
 
-Run tests:
-```bash
+## After refactoring of the code, this extra step is needed in order to run the tests locally
+The target website is provided via environment variable to keep the repository public and neutral.
+Before running the tests locally, set the `BASE_URL` environment variable to the target site in powershell.
+
+```powershell
+$env:BASE_URL="https://target-site.com"
 dotnet test
-```
