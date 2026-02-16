@@ -1,5 +1,3 @@
-using System;
-using System.IO;
 using System.Text.Json;
 
 namespace AutomationTests.Framework;
@@ -12,6 +10,7 @@ public static class ConfigLoader
         public string? browser { get; set; }
         public bool? headless { get; set; }
         public int? timeoutMs { get; set; }
+        public int? slowMoMs { get; set; }
     }
 
     public static TestConfig Load(string filePath)
@@ -19,10 +18,12 @@ public static class ConfigLoader
         // Default values after refactoring
         var baseUrl = "https://example.com";
         var browser = BrowserType.Chromium;
-        var headless = true;
+        var headless = false;
         var timeoutMs = 30_000;
+        var slowMoMs = 0;
 
-        // Load from appsettings.json needed after refactoring to set defaults in one place, but also to allow local overrides without env vars
+        // Load from appsettings.json needed after refactoring to set defaults in one place, 
+        // but also to allow local overrides without env vars
         if (File.Exists(filePath))
         {
             var json = File.ReadAllText(filePath);
@@ -39,6 +40,9 @@ public static class ConfigLoader
 
             if (raw.timeoutMs.HasValue && raw.timeoutMs.Value > 0)
                 timeoutMs = raw.timeoutMs.Value;
+
+            if (raw.slowMoMs.HasValue && raw.slowMoMs.Value >= 0)
+                slowMoMs = raw.slowMoMs.Value;
         }
 
         // Environment variable override (for CI to point to right URL)
@@ -46,7 +50,7 @@ public static class ConfigLoader
         if (!string.IsNullOrWhiteSpace(envBaseUrl))
             baseUrl = envBaseUrl.Trim();
 
-        return new TestConfig(baseUrl, browser, headless, timeoutMs);
+        return new TestConfig(baseUrl, browser, headless, timeoutMs, slowMoMs);
     }
 
     private static BrowserType ParseBrowser(string browser)

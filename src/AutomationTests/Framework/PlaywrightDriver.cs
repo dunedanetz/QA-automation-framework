@@ -17,15 +17,18 @@ public sealed class PlaywrightDriver : IAsyncDisposable
         {
             BrowserType.Firefox => await Playwright.Firefox.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = config.Headless
+                Headless = config.Headless,
+                SlowMo = config.SlowMoMs
             }),
             BrowserType.Webkit => await Playwright.Webkit.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = config.Headless
+                Headless = config.Headless,
+                SlowMo = config.SlowMoMs
             }),
             _ => await Playwright.Chromium.LaunchAsync(new BrowserTypeLaunchOptions
             {
-                Headless = config.Headless
+                Headless = config.Headless,
+                SlowMo = config.SlowMoMs
             }),
         };
 

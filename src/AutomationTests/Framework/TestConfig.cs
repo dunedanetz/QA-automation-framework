@@ -11,5 +11,6 @@ public sealed record TestConfig(
     string BaseUrl,
     BrowserType Browser,
     bool Headless,
-    int TimeoutMs
+    int TimeoutMs,
+    int SlowMoMs
 );
