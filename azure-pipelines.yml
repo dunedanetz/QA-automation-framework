@@ -1,0 +1,12 @@
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo "Hello from Azure Pipelines"
+    node -v || true
+    python --version || true
+  displayName: "Sanity: agent info"
